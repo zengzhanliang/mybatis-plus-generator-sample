@@ -1,5 +1,5 @@
 CREATE TABLE `user` (
-  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `id` varchar(32) DEFAULT NULL COMMENT '主键',
   `name` varchar(32) DEFAULT NULL COMMENT '姓名',
   `address` varchar(64) DEFAULT NULL COMMENT '联系地址',
   `username` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin DEFAULT NULL COMMENT '账号',
