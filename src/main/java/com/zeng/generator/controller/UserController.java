@@ -20,7 +20,7 @@ import io.swagger.annotations.ApiOperation;
     * </p>
  *
  * @author zengzhanliang
- * @since 2019-12-12
+ * @since 2019-12-16
  */
 @RestController
 @RequestMapping("/user")
@@ -29,9 +29,9 @@ public class UserController extends BaseController<IUserService,User> {
 
     @Override
     @ApiOperation(value="获取 user 详细信息", notes="根据url的 id 来获取 user 详细信息")
-    @ApiImplicitParam(name = "id", value = "唯一编码", dataType = "int", paramType="query", defaultValue = "10000015")
+    @ApiImplicitParam(name = "id", value = "唯一编码", dataType = "long", paramType="query", defaultValue = "10000015")
     @RequestMapping(value="/getById", method=RequestMethod.GET)
-    public Object getById(int id) {
+    public Object getById(long id) {
         return super.getById(id);
     }
 
@@ -66,9 +66,9 @@ public class UserController extends BaseController<IUserService,User> {
 
     @Override
     @ApiOperation(value="删除 user ", notes="根据url的 id 来删除 user ")
-    @ApiImplicitParam(name = "id", value = "唯一编码", dataType = "int", paramType="query", defaultValue = "10000015")
+    @ApiImplicitParam(name = "id", value = "唯一编码", dataType = "long", paramType="query", defaultValue = "10000015")
     @RequestMapping(value="/removeById", method=RequestMethod.GET)
-    public Object removeById(int id) {
+    public Object removeById(long id) {
         return super.removeById(id);
     }
 
